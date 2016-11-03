@@ -38,4 +38,18 @@ public class CafeTest {
         //Then
         Assert.assertEquals(0, cafe.getBeanInStock());
     }
+
+
+    //Then
+    @Test (expected = IllegalStateException.class)
+    //@Test
+    public void latteRequireMilk() {
+
+        //Given
+        Cafe cafe = new Cafe();
+        cafe.restockBean(7);
+
+        //When
+        Coffee coffee = cafe.brew(CoffeeType.Latte);
+    }
 }
