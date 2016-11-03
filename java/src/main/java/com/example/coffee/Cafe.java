@@ -41,7 +41,7 @@ public final class Cafe {
 
     private void requirePositive(int value) {
         if(value < 1) {
-            throw  new IllegalStateException("value is less than 1");
+            throw  new IllegalArgumentException("value is less than 1");
         }
     }
 
